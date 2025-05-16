@@ -1,5 +1,12 @@
-const notas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function calcularMedias(notas) {
+  const soma = notas.reduce(
+    (acumulador, notaAtual) => acumulador + notaAtual,
+    0
+  );
 
-function calcularNotas(notas) {
-  let soma = 0;
+  const media = soma / notas.length;
+
+  return media;
 }
+const resultado = calcularMedias([8, 7, 10]);
+console.log(`A média é ${resultado}`);
